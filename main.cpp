@@ -1,8 +1,6 @@
 /**********
-* Robin Park (rpark01)
-* Comp15 Proj2
+* Robin Park
 * Main
-* Modified on 04-12-2017
 **********/
 
 #include <iostream>

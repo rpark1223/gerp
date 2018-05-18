@@ -1,8 +1,6 @@
 /**********
-* Robin Park (rpark01)
-* Comp15 Proj2
+* Robin Park
 * Gerp Header File
-* Modified on 04-15-2017
 **********/
 #ifndef GERP_H
 #define GERP_H

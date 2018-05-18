@@ -1,10 +1,3 @@
-/**********
-* Robin Park (rpark01)
-* Comp15 Proj2
-* README
-* Modified on 04-12-2017
-**********/
-
 A. The purpose of this program is to index and search a file tree for strings,
 similar to the Unix "grep" program.
 B. Files:

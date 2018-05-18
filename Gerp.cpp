@@ -1,8 +1,6 @@
 /**********
-* Robin Park (rpark01)
-* Comp15 Proj2
+* Robin Park
 * Gerp Implementation File
-* Modified on 04-15-2017
 **********/
 
 #include <iostream>

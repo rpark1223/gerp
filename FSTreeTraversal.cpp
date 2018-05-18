@@ -1,6 +1,5 @@
 /**********
-* Robin Park (rpark01)
-* Comp15 Proj2
+* Robin Park
 * Implementation file for tree traversal
 * Modified on 04-12-2017
 **********/

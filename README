@@ -1,0 +1,47 @@
+/**********
+* Robin Park (rpark01)
+* Comp15 Proj2
+* README
+* Modified on 04-12-2017
+**********/
+
+A. The purpose of this program is to index and search a file tree for strings,
+similar to the Unix "grep" program.
+B. Files:
+  1. main.cpp: contains the main to run the "gerp" program
+  2. Gerp.h: header file for the Gerp class
+  3. Gerp.cpp: implementation file for the Gerp class
+  4. HashTable.h: header file for the HashTable class
+  5. HashTable.cpp: implementation file for the HashTable class
+C. Compiling & Running
+  1. To compile, one would use the "make" command, which makes use of the
+  makefile I created.
+  2. To run the program, one would input "./gerp" followed by a valid directory
+  into the command line.
+D. My Gerp class contained the overall implementation for the gerp program,
+indexing the file tree with the supplied directory and then searching that tree
+by means of a hash table, an instance of which is found in the Gerp class.
+E. I used a hash table to represent my file tree. I converted every word to its
+lowercase version to represent its case-insensitive version, which I then used
+to insert the word into the tree. I retained the case-sensitive version of each
+word as it appeared in its file, stripped of its non-alphanumeric characters. I
+also had a vector containing every distinct path in the file tree, down to the
+line. Thus, I inserted each word into the hashtable by passing my insert
+function both the word's case-sensitive and insensitive versions and also the
+indices of the path vector that contained the lines on which the word appeared.
+In my insert function, I compared only the case-sensitive version of the word
+being inserted to the other words that hashed to the same index. If the same
+word already existed, I would simply add the indices of the paths vector to
+which the word being inserted corresponded to the the vector of other indices
+where that word occurred. Thus, when searching case-insensitively, one could
+retrieve all the nodes that have the same key (aka lower-case version) as the
+word being searched for, and when searching case-sensitively, one would only
+need to retrieve the one node that contains the same case-sensitive word as the
+query. Otherwise, if the word did not already exist, I would simply add it to
+the end of the linked list in the hashed slot (or the beginning, if that slot
+were empty). To print, simply print the paths in the vector in my Gerp class
+that correspond to the indices contained in each wordInfo struct's vector.
+F. I first tested both my Gerp and HashTable individually with my own test
+files, making sure words were being inserted correctly according to case, and
+that each and every file path and word was being considered, etc. Then, I tested
+using the directory of tests provided to us and compared the outputs.
